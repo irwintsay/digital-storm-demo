@@ -1,0 +1,58 @@
+/* Sample Bread button customCSS */
+
+html, body, #bread-button {
+ height: 100%;
+ margin: 0;
+ width: 100%;
+}
+
+body {
+ display: table;
+}
+
+#bread-button {
+ /* Base button styles */
+ background: #FFF;
+ color: rgb(216, 59, 52);
+ display: table-cell;
+ font-family: 'Montserrat', sans-serif;
+ font-size: 14px;
+ text-align: center;
+ vertical-align: middle;
+}
+
+#bread-button.bread-btn:hover {
+
+ /* Overall button hover styles */
+ 
+}
+
+.bread-text {
+  cursor: pointer;
+  transition: border 0.1s linear;
+}
+
+.bread-text:hover {
+  border-bottom: 1px solid rgb(216, 59, 52);
+}
+
+.bread-amt {
+  font-weight: bold;
+}
+
+.bread-embed-inner, .bread-label .bread-embed-icon {
+ display: inline-block;
+}
+
+.bread-btn .bread-as-low-as:before,
+.bread-label .bread-as-low-as:before {
+
+ /* Prefix for buttons with `asLowAs: true` */
+ content: 'As low as ';
+}
+
+.bread-for:before {
+
+ /* Prefix for logged in users */
+ content: 'Or ';
+}
