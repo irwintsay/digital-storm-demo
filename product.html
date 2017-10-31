@@ -26,7 +26,13 @@
       allowCheckout: false,
       asLowAs: true,
       customTotal: 200000,
-      customCSS: "#bread-button,body,html{height:100%;margin:0;width:100%}body{display:table}#bread-button{background:#FFF;color:#d83b34;display:table-cell;font-family:Montserrat,sans-serif;font-size:14px;text-align:center;vertical-align:middle}.bread-text{cursor:pointer;transition:border .1s linear}.bread-text:hover{border-bottom:1px solid #d83b34}.bread-amt{font-weight:700}.bread-embed-inner,.bread-label .bread-embed-icon{display:inline-block}.bread-btn .bread-as-low-as:before,.bread-label .bread-as-low-as:before{content:'As low as '}.bread-for:before{content:'Or '}",
+      customCSS: "#bread-button,body,html{height:100%;margin:0;width:100%}body{display:table}#bread-button{background:#FFF;color:#d83b34;display:table-cell;font-family:Montserrat,sans-serif;font-size:14px;text-align:center;vertical-align:middle}.bread-text{cursor:pointer;transition:border .1s linear}.bread-text:hover{border-bottom:1px solid #d83b34}.bread-amt{font-weight:700}.bread-embed-inner,.bread-label .bread-embed-icon{display:inline-block}.bread-btn .bread-as-low-as:before,.bread-label .bread-as-low-as:before{content:'or '}.bread-for:before{content:'or '}",
+      onCustomerClose: function(error, customer) {
+        console.log(error);
+        console.log(customer.email);
+        console.log(customer.state);
+        console.log(opts.customTotal);
+      },
       done: function() {
         console.log('Checkout Successful!');
       }
